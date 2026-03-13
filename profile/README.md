@@ -2,7 +2,7 @@
 
 Production-ready infrastructure and platform engineering projects.
 
-This organization contains maintained versions of projects originally developed in personal repositories. Repositories are promoted here once they reach a stable, production-ready state.
+This organization contains maintained versions of projects originally developed in my personal repositories. Repositories are promoted here once they reach a stable, production-ready state.
 
 Focus areas include:
 
