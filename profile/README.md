@@ -6,30 +6,6 @@ Everything here runs in a real homelab before it gets published. Repos are docum
 
 ---
 
-## ActionsManager
-
-A control plane for managing GitHub Actions workflows across many repositories from one place — sync workflows, detect configuration drift, and ship changes as reviewable pull requests.
-
-| Repo | What it is |
-|---|---|
-| [**actions-manager**](https://github.com/dawg-io/actions-manager) | The application. Python + React, runs as a single container. **Free self-hosted beta** — no paid plans, no hosted SaaS yet. |
-| [**am-build-vars**](https://github.com/dawg-io/am-build-vars) | Composite Action that reads a committed `am-build-vars.yml` and exports each key as an env var, so one byte-identical workflow builds differently per repo. |
-
-```bash
-docker run -d --name actions-manager -p 8080:8080 \
-  -v actions-manager-data:/app/data \
-  -e INSTALLATION_MODE=self-hosted \
-  -e SECRET_KEY=<openssl rand -hex 32> \
-  -e ALLOW_INSECURE_HTTP=true \
-  ghcr.io/dawg-io/actions-manager:latest
-```
-
-Docs: [actionsmanager.io](https://actionsmanager.io) · Demo: [multi-repo rollout, end to end](https://youtu.be/WkDYK7pCBjI)
-
-> Beta software. Self-hosted operators are responsible for securing the deployment, protecting GitHub credentials, and reviewing workflow changes before they land. PR-based delivery is recommended over direct commit.
-
----
-
 ## Home Assistant
 
 Two HACS default integrations, plus a dashboard card and blueprints — most of them built to make infrastructure visible from inside Home Assistant.
